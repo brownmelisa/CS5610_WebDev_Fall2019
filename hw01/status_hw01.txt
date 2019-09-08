@@ -4,16 +4,22 @@ Please fill in answers to the questions below:
    Melisa Brown
 
 2. Which VPS & domain providers did you choose?
-   vultr.com
+   VPS: vultr.com
+   domain provider: joker.com
 
 3. What domain name did you register?
-   mochiswebforge.site
+   mochiswebforge.site, IP: 207.148.31.50
 
 4. Which parts of this assignment did you have trouble with, if any?
-   Installing Debian. I had issues with installing Ubuntu on 
+   * Installing Debian. 
+   I had issues with installing Ubuntu on 
    VirtualBox before, so I first tried to dual boot Debian on my Mac.
    The new security features on Mac made it an absolute nightmare, 
    so I ended up using VirtualBox and it was fine.
+
+   * Figuring out the nginx config files. 
+   I wasn't sure how to point the two different index.html files to 
+   the different sub domains.
 
 5. Whats the URL for your git repository?
    https://github.com/brownmelisa/CS5610_WebDev_Fall2019
