@@ -1,7 +1,6 @@
 Please fill in answers to the questions below:
 
 1. What's your name?
-
    Melisa Brown
 
 2. Which VPS & domain providers did you choose?
@@ -11,14 +10,12 @@ Please fill in answers to the questions below:
    mochiswebforge.site
 
 4. Which parts of this assignment did you have trouble with, if any?
-   
    Installing Debian. I had issues with installing Ubuntu on 
    VirtualBox before, so I first tried to dual boot Debian on my Mac.
    The new security features on Mac made it an absolute nightmare, 
    so I ended up using VirtualBox and it was fine.
 
 5. Whats the URL for your git repository?
-
    https://github.com/brownmelisa/CS5610_WebDev_Fall2019
 
 
