@@ -18,8 +18,10 @@ Please fill in answers to the questions below:
    so I ended up using VirtualBox and it was fine.
 
    * Figuring out the nginx config files. 
-   I wasn't sure how to point the two different index.html files to 
-   the different sub domains.
+   In the sites-available config file for the main page, the root 
+   directory in the example was /home/nate/www/ironbeard.com, but
+   for the assignment the directory should have ended in /main,
+   which was probably obvious, but not to me :(
 
 5. Whats the URL for your git repository?
    https://github.com/brownmelisa/CS5610_WebDev_Fall2019
