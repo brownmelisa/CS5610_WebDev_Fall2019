@@ -8,7 +8,8 @@ Please fill in answers to the questions below:
    domain provider: joker.com
 
 3. What domain name did you register?
-   mochiswebforge.site, IP: 207.148.31.50
+   domain name: mochiswebforge.site
+   IP: 207.148.31.50
 
 4. Which parts of this assignment did you have trouble with, if any?
    * Installing Debian. 
