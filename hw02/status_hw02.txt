@@ -1,0 +1,51 @@
+Please fill in answers to the questions below:
+
+
+1. What's your name?
+   Melisa Brown
+
+2. What hostname did you deploy to?
+   mochiswebforge.site
+
+3. What's the link to your repository on github with your code?
+   
+
+4. How many HTML / CSS tutorial exercises did you do?
+   I did the first chunk of lessons (~30 each) for HTML and CSS and
+   their accompanying exercises. I plan on goign back for the more
+   advanced topics a little each week.
+
+5. How comfortable do you feel with HTML and CSS now?
+   I feel pretty comfortable with the basic syntax and structure,
+   but will need to refer back to the tutorial for more advanced
+   topics.
+
+6. How many JS tutorial exercises did you do?
+   I completed all of first chunk labeled "JS Tutorial" then did
+   JS Functions and the JS HTML DOM sections since they seemed
+   the most needed for this homework. 
+
+7. How comfortable do you feel with JS now?
+   I'm still slightly confused about how it all fits together with
+   HTML and CSS. I'm ok with the actual syntax of the language since
+   it's not all that different from Java, Python, Perl, etc.
+
+8. Do all of your HTML pages pass the W3C HTML validator?
+(https://validator.w3.org/)
+
+
+9. Which parts of this assignment did you have trouble with, if any?
+
+
+
+
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Task 1
+ - Task 2
+ - Task 3
+ - Task 4
+ - Task 5
+ - Task 6
+ - Task 7
+ - Task 8
