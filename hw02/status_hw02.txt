@@ -8,7 +8,7 @@ Please fill in answers to the questions below:
    mochiswebforge.site
 
 3. What's the link to your repository on github with your code?
-   
+   https://github.com/brownmelisa/CS5610_WebDev_Fall2019   
 
 4. How many HTML / CSS tutorial exercises did you do?
    I did the first chunk of lessons (~30 each) for HTML and CSS and
@@ -35,9 +35,9 @@ Please fill in answers to the questions below:
 
 
 9. Which parts of this assignment did you have trouble with, if any?
-
-
-
+   Getting the logic correct with the calculator. I wasn't sure if I
+   programmed the buttons properly because I wasn't sure exaclty
+   how a 4-function calculator was supposed to work.
 
 
 And here's a list of tasks for grading comments. Just leave this here:
