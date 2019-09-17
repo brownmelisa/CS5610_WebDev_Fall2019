@@ -1,7 +1,10 @@
 .calc-container {
   background-color: darkslategray;
-  margin: 50px;
-  border: black outset 10px;
+  margin-top: 20px;
+  margin-left: 50px;
+  border-style: outset;
+  border-color: dimgray;
+  border-width: 10px;
   border-radius: 4px;
   padding: 10px;
   width: 300px;
@@ -9,13 +12,15 @@
 }
 
 h2 {
-  margin-left: 50px;
+  margin-left: 65px;
 }
 
 #display {
   margin: 20px 20px 50px 20px;
   background-color: blanchedalmond;
-  border: black inset 5px;
+  border-style: inset;
+  border-color: dimgray;
+  border-width: 5px;
   border-radius: 4px;
   font-size: 30px;
   text-align: right;
@@ -35,5 +40,7 @@ button {
   width: 50px;
   height: 40px;
   font-size: 20px;
+  border-style: outset;
+  border-width: 4px;
   border-radius: 4px;
 }

@@ -4,16 +4,6 @@
   // define global variable to hold last calculation
   let CALCULATION = {term1:"", term2:"", operator:"", total:NaN};
 
-  // function addNum(currentValue, num1) {
-  //   newValue = currentValue + num1;
-  //   updateValue(newValue);
-  // }
-  //
-  // function subtractNum(currentValue, num1) {
-  //   newValue = currentValue - num1;
-  //     updateValue(newValue);
-  // }
-
   // clears the display and resets the calculation object. Called when user
   // click on the clear "C" button
   function clearDisplay() {
@@ -24,28 +14,51 @@
     document.getElementById("display").innerHTML = 0;
   }
 
+  // changes the display to the specified number
   function updateDisplay(num) {
-    document.getElementById("display").innerHTML = num;
+    var displayNum = num;
+    if (typeof(num) === "number" && num.toString().length > 16) {
+      console.log(typeof(num));
+      var precisionNum = 16;
+      displayNum = num.toPrecision(precisionNum);
+      console.log("num type is " + typeof(num));
+      console.log("diplay num type is " + typeof(displayNum));
+      while (displayNum.length > 16) {
+        console.log(typeof(num));
+        displayNum = num.toPrecision(precisionNum);
+        precisionNum = precisionNum-1;
+      }
+    }
+    document.getElementById("display").innerHTML = displayNum;
   }
 
+  // updates the display after user clicks a number button
   function updateNumber() {
     var digit = this.innerHTML;
 
     // update the number displayed
-    var displayObj = document.getElementById("display");
-    if (displayObj.innerHTML === "0") {
-      displayObj.innerHTML = digit;
-    } else {
-      displayObj.innerHTML += digit;
+    var displayString = document.getElementById("display").innerText;
+    // current display is 0
+    if (displayString === "0") {
+      updateDisplay(digit);
+    }
+    // trying to add decimal when current display already has decimal
+    else if (digit === "." && CALCULATION.term2.indexOf(".") > -1) {
+      console.log("trying to add decimal");
+      console.log(CALCULATION.term2);
+      return;
+    }
+    // safe to lengthen the number
+    else {
+      updateDisplay(displayString + digit);
     }
 
     // update the number in the CALCULATION object
     if (CALCULATION.operator === "") {
       CALCULATION.term1 += digit;
-    }
-    else {
+    } else {
       CALCULATION.term2 += digit;
-      displayObj.innerHTML = CALCULATION.term2;
+      updateDisplay(CALCULATION.term2);
     }
   }
 
@@ -55,35 +68,39 @@
     // change the operator string to valid mathematical operator
     switch(clickedOperator) {
       case "+/=":
-        console.log("plus");
         mathOperator = "+";
         break;
       case "-":
-        console.log("minus");
         mathOperator = "-";
         break;
       case "x":
-        console.log("multiply");
         mathOperator = "*";
         break;
       case "÷":
-        console.log("divide");
         mathOperator = "/";
         break;
       default:
         throw "something went wrong";
     }
 
-    // check if operator already exists
+    // operator not yet input (first round)
     if (CALCULATION.operator === "") {
       CALCULATION.operator = mathOperator;
     }
-    else if (CALCULATION.term2 !== "") {
+    // ready to calculate total
+    else if (CALCULATION.operator !== "" && CALCULATION.term2 !== "") {
       var calcString = CALCULATION.term1 + CALCULATION.operator + CALCULATION.term2;
+      // console.log("calc string is: " + calcString);
       CALCULATION.total = eval(calcString);
       updateDisplay(CALCULATION.total);
       CALCULATION.term1 = CALCULATION.total;
-      CALCULATION.operator = CALCULATION.mathOperator;
+      CALCULATION.term2 = "";
+      CALCULATION.operator = mathOperator;
+    }
+    // previous button click was "+/="
+    else if (CALCULATION.operator === "+" && CALCULATION.term2 === "") {
+      CALCULATION.operator = mathOperator;
+
     }
   }
 
@@ -92,8 +109,6 @@
 
     // add event listener for clear button
     document.getElementById("clear_btn").onclick = clearDisplay;
-    // var clear = document.getElementById("btn_clear");
-    // clear.addEventListener("click", updateDisplay);
 
     // add event listener for each of the number buttons
     var numbers = document.getElementsByClassName("num_btn");
@@ -110,17 +125,6 @@
     }
   }
 
-  //The window object calls the function:
   window.addEventListener("load", init, false);
+
 }) ();
-
-
-
-// use toPrecision() to return a string with a number written with a specified length
-// parseFloat() and parseInt()
-
-
-// multiple and divide to get an exact number
-// var x = 0.1;
-// var y = 0.2;
-// var z = (x * 10 + y * 10) / 10;
