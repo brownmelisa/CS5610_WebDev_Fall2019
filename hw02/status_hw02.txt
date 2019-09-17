@@ -31,8 +31,8 @@ Please fill in answers to the questions below:
    it's not all that different from Java, Python, Perl, etc.
 
 8. Do all of your HTML pages pass the W3C HTML validator?
-(https://validator.w3.org/)
-
+   (https://validator.w3.org/)
+   Yes, check all sites with no errors or warnings.
 
 9. Which parts of this assignment did you have trouble with, if any?
    Getting the logic correct with the calculator. I wasn't sure if I
